@@ -7,7 +7,11 @@ body {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-
+  background-color: rgb(95, 95, 222);
+  background-image: url('../img/star-wars.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -24,4 +28,59 @@ p {
 .container {
   display: flex;
   width: 90vw;
+}
+
+.search {
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.input {
+  border: 0;
+
+  width: 30px;
+  height: 31px;
+
+  transition: width 250ms linear;
+}
+
+.btn:focus,
+input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: #555;
+  font-size: 16px;
+}
+
+.input.input-show {
+  width: 250px;
+  padding-left: 12px;
+  transition: width 250ms linear;
+}
+
+.btn {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: -15px;
+  transform: translate(-50%);
+
+  width: 30px;
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+
+  cursor: pointer;
+  background: transparent;
+}
+
+.btn i {
+  /* font-size: 12px; */
 }
